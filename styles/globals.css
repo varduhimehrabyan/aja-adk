@@ -1,0 +1,201 @@
+/* body {
+  background-color: #e5e5e5;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mont */
+@font-face {
+  font-family: "Mont";
+  src: url("../assets/font/Mont/Mont-Book.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("../assets/font/Mont/Mont-Black.otf");
+  font-weight: 900;
+}
+
+/* Myriad */
+@font-face {
+  font-family: "Myriad";
+  src: url("../assets/font/Myriad/Myriad\ Pro\ Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Myriad";
+  src: url("../assets/font/Myriad/Myriad\ Pro\ Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Myriad";
+  src: url("../assets/font/Myriad/Myriad\ Pro\ Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Myriad";
+  src: url("../assets/font/Myriad/Myriad\ Pro\ Black.otf");
+  font-weight: 900;
+}
+
+@layer components {
+  .page-container {
+    @apply container mx-auto relative flex px-[1rem] md: px-[4rem];
+  }
+}
+
+/* form error style */
+.error {
+  color: #bf1650;
+}
+
+.error::before {
+  display: inline;
+  content: "⚠ ";
+}
+
+/*Members Swiper style*/
+.scrollXHide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollXHide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styicky position */
+/* .titleSticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+} */
+
+/* hide accordion scrollbar */
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.Container {
+  height: 600px;
+  width: 300px;
+}
+
+.Container li {
+  padding: 0.3rem 1rem;
+}
+
+.Container .Header {}
+
+.Container li.Header {
+  background-color: white;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+.fade-up {
+  opacity: 1;
+  animation-name: fadeUp;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+.fade-in-navbar {
+  opacity: 1;
+  animation-name: fadeInNavbar;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+.imageSlide .slick-slide {
+  width: 366px !important;
+  margin-right: 2px !important;
+}
+
+.imageSlide .slick-list {
+  margin-right: -2px !important;
+  max-height: 192px !important;
+}
+
+.bannerSlide .slick-dots {
+  bottom: 32px !important;
+}
+
+.bannerSlide .slick-dots li button:before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.bannerSlide .slick-dots li.slick-active button:before {
+  color: black !important;
+  opacity: 1 !important;
+}
+
+.container {
+  width: 100%;
+}
+
+.accordion {
+  overflow: hidden;
+}
+
+.accordion [role="region"] {
+  display: none;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInNavbar {
+  0% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bannerSlide .slick-dots {
+    bottom: 16px !important;
+  }
+}
